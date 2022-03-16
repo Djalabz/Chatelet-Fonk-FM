@@ -9,10 +9,11 @@ function Player() {
         file: '',
     }
 
-    let audio = new Audio("../../../")
+    let audio = new Audio("../../../public/music/Avant Garden.mp3")
 
     const start = () => {
-      audio.play()
+    //   audio.play()
+      console.log('play')
     }
 
     return (
