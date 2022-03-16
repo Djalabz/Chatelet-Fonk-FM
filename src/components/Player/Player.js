@@ -1,15 +1,25 @@
 import './Player.css';
+import Play from '../Play/Play';
 
 function Player() {
+    const track = {
+        title: 'Le grand méchant Loulou',
+        artist: 'Jalab',
+        image: '../../../public/images/jalab-album.png',
+        file: '',
+    }
+
+    let audio = new Audio("../../../")
+
+    const start = () => {
+      audio.play()
+    }
+
     return (
         <div className="container">
             <div className="console">
                 <div className="buttons">
-                    <div className="play">
-                        <div className="play-btn">
-
-                        </div>
-                    </div>
+                    < Play onClick={start} />
                     <div className="pause"></div>
                     <div className="volume"></div>
                 </div>
@@ -17,11 +27,11 @@ function Player() {
             <div className="infos">
                 <div className="name">
                     <p>
-                        Le grand méchant Loulou
+                        {track.title}
                     </p>
                 </div>
                 <div className="artist">
-                    <p>Jalab</p>
+                        {track.artist}
                 </div>
                 {/* <div className="album">
                     <p>Saint-Phony</p>
@@ -32,8 +42,8 @@ function Player() {
                 </div> */}
             </div>
             <div className="image">
-                <div className="cover">
-                </div>
+                <img className="cover" src={track.image}>
+                </img>
             </div>
             <div className="links">
                 <div className="hide">
