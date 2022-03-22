@@ -6,10 +6,10 @@ function Player() {
         title: 'Le grand méchant Loulou',
         artist: 'Jalab',
         image: '../../../public/images/jalab-album.png',
-        file: '',
+        file: '../../../public/music/Avant-Garden.mp3',
     }
 
-    let audio = new Audio("../../../public/music/Avant Garden.mp3")
+    let audio = new Audio(track.file)
 
     const start = () => {
     //   audio.play()
@@ -20,7 +20,8 @@ function Player() {
         <div className="container">
             <div className="console">
                 <div className="buttons">
-                    < Play onClick={start} />
+                    < Play />
+
                     <div className="pause"></div>
                     <div className="volume"></div>
                 </div>

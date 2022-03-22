@@ -1,13 +1,10 @@
 import './App.css';
-
-import Player from '../Player/Player';
-import Background from '../Background /Background';
+import Play from '../Play/Play'
 
 function App() {
   return (
     <div className="App">
-      < Player />
-      < Background />
+      < Play />
     </div>
   );
 }
