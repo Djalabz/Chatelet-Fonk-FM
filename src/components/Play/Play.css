@@ -8,3 +8,10 @@
     cursor: pointer;
 }
 
+.showList {
+	display: flex;
+}
+
+.show {
+	margin: 12px;
+}

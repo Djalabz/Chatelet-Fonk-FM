@@ -20,7 +20,6 @@ function Player() {
         <div className="container">
             <div className="console">
                 <div className="buttons">
-                    < Play />
 
                     <div className="pause"></div>
                     <div className="volume"></div>
