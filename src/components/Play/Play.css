@@ -15,3 +15,6 @@
 .show {
 	margin: 24px;
 }
+ li {
+	 list-style-type: none;
+ }
