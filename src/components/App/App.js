@@ -5,9 +5,9 @@ import Header from '../Header/Header'
 
 function App() {
   const tracks = {
-    title : '',
-    artist: '',
-    audioSrc: '',
+    title : 'Voyager',
+    artist: 'Alan Parson',
+    audioSrc: '../../../public/music/Voyager.mp3',
   }
 
   return (

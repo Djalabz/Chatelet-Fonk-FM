@@ -16,7 +16,8 @@ function Player({ tracks }) {
 	// const { title, artist, color, image, audioSrc } = tracks[trackIndex];
 
 	// Refs
-    const audioRef = useRef(new Audio('../../../public/music/Voyager.mp3'));
+
+    const audioRef = useRef(new Audio());
     const intervalRef = useRef();
     const isReady = useRef(false);
 
@@ -33,9 +34,10 @@ function Player({ tracks }) {
 
     return (
 		<div className="audio-player">
-			<div className="track-info">hey
+			<div className="track-info">
 		    <h2 className="title">{tracks.title}</h2>
             <h3 className="artist">{tracks.artist}</h3> 
+            
 			</div>
             <AudioControls
                 isPlaying={isPlaying}
