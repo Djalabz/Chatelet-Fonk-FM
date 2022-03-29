@@ -1,9 +1,11 @@
 import './Header.css';
 
+import Logo from '../../assets/cfonkfm.svg';
+
 export default function Header() {
     return (
         <div className="header">
-           <div className='logo' />
+           <img className='logo' src={Logo} />
         </div>
     )
 }

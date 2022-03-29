@@ -1,57 +1,52 @@
 import './Player.css';
-import Play from '../Play/Play';
+import AudioControls from '../AudioControls/AudioControls';
 
-function Player() {
-    const track = {
-        title: 'Le grand méchant Loulou',
-        artist: 'Jalab',
-        image: '../../../public/images/jalab-album.png',
-        file: '../../../public/music/Avant-Garden.mp3',
-    }
+import React, { useState, useEffect, useRef } from 'react';
 
-    let audio = new Audio(track.file)
 
-    const start = () => {
-    //   audio.play()
-      console.log('play')
+
+function Player({ tracks }) {
+
+    // STATE
+    const [trackIndex, setTrackIndex] = useState(0);
+    const [trackProgress, setTrackProgress] = useState(0);
+    const [isPlaying, setIsPlaying] = useState(false);
+
+	// Destructure for conciseness
+	// const { title, artist, color, image, audioSrc } = tracks[trackIndex];
+
+	// Refs
+    const audioRef = useRef(new Audio('../../../public/music/Voyager.mp3'));
+    const intervalRef = useRef();
+    const isReady = useRef(false);
+
+	// Destructure for conciseness
+	const { duration } = audioRef.current;
+
+    const toPrevTrack = () => {
+        console.log('TODO go to prev');
+      }
+    
+    const toNextTrack = () => {
+        console.log('TODO go to next');
     }
 
     return (
-        <div className="container">
-            <div className="console">
-                <div className="buttons">
+		<div className="audio-player">
+			<div className="track-info">hey
+		    <h2 className="title">{tracks.title}</h2>
+            <h3 className="artist">{tracks.artist}</h3> 
+			</div>
+            <AudioControls
+                isPlaying={isPlaying}
+                onPrevClick={toPrevTrack}
+                onNextClick={toNextTrack}
+                onPlayPauseClick={setIsPlaying}
+            />
+		</div>
+	);
 
-                    <div className="pause"></div>
-                    <div className="volume"></div>
-                </div>
-            </div>
-            <div className="infos">
-                <div className="name">
-                    <p>
-                        {track.title}
-                    </p>
-                </div>
-                <div className="artist">
-                        {track.artist}
-                </div>
-                {/* <div className="album">
-                    <p>Saint-Phony</p>
-                </div>
-                <div className="label-country">
-                    <p>Chatelet Records</p>
-                    <p>France</p>
-                </div> */}
-            </div>
-            <div className="image">
-                <img className="cover" src={track.image}>
-                </img>
-            </div>
-            <div className="links">
-                <div className="hide">
-                </div>
-            </div>
-        </div>
-    )
+
 }
 
 export default Player;

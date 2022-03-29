@@ -9,8 +9,7 @@
 }
 
 .logo {
-    background-image: url('../../../public/images/logo.png');
-    background-size: cover;
+
     width: 200px;
     height: 400px;
 }

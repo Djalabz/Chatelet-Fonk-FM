@@ -1,13 +1,19 @@
 import './App.css';
 
-import Play from '../Play/Play'
+import Player from '../Player/Player'
 import Header from '../Header/Header'
 
 function App() {
+  const tracks = {
+    title : '',
+    artist: '',
+    audioSrc: '',
+  }
+
   return (
     <div className="App">
       < Header />
-      < Play />
+      < Player tracks={tracks} />
     </div>
   );
 }
